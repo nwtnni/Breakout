@@ -1,0 +1,16 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+Ball	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^public class Ball {$/;"	c	language:Java
+Brick	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Brick(int n) {$/;"	m	language:Java	class:Brick
+Brick	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^public class Brick  {$/;"	c	language:Java
+COLOR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final Color COLOR = Color.RED;$/;"	f	language:Java	class:Ball
+colors	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private static final Color[] colors = {$/;"	f	language:Java	class:Brick	file:
+elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^package elements;$/;"	p	language:Java
+elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^package elements;$/;"	p	language:Java
+getColor	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public Color getColor() {$/;"	m	language:Java	class:Ball
+getColor	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Color getColor() {$/;"	m	language:Java	class:Brick
+getR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public int getR() {$/;"	m	language:Java	class:Ball
+H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int H = 25;$/;"	f	language:Java	class:Brick
+hit	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public boolean hit() {$/;"	m	language:Java	class:Brick
+layer	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private int layer;$/;"	f	language:Java	class:Brick	file:
+RADIUS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final int RADIUS = 10;$/;"	f	language:Java	class:Ball
+W	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int W = 40;$/;"	f	language:Java	class:Brick

@@ -1,0 +1,11 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+Ball	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^public class Ball {$/;"	c	language:Java
+COLOR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final Color COLOR = Color.RED;$/;"	f	language:Java	class:Ball
+elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^package elements;$/;"	p	language:Java
+elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Layer.java	/^package elements;$/;"	p	language:Java
+elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Rectangle.java	/^package elements;$/;"	p	language:Java
+getC	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public Color getC() {$/;"	m	language:Java	class:Ball
+getR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public int getR() {$/;"	m	language:Java	class:Ball
+Layers	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Layer.java	/^public enum Layers {$/;"	g	language:Java
+RADIUS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final int RADIUS = 10;$/;"	f	language:Java	class:Ball
+Rectangle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Rectangle.java	/^public interface Rectangle {$/;"	i	language:Java
