@@ -3,19 +3,27 @@ Ball	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.j
 Breakout	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^public class Breakout extends Application {$/;"	c	language:Java
 Brick	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Brick(int n) {$/;"	m	language:Java	class:Brick
 Brick	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^public class Brick  {$/;"	c	language:Java
+bricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private Brick[][] bricks;$/;"	f	language:Java	class:Level	file:
 COLOR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final Color COLOR = Color.RED;$/;"	f	language:Java	class:Ball
 COLOR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final Color COLOR = Color.DARKSEAGREEN;$/;"	f	language:Java	class:Paddle
 colors	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private static final Color[] colors = {$/;"	f	language:Java	class:Brick	file:
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^package elements;$/;"	p	language:Java
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^package elements;$/;"	p	language:Java
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^package elements;$/;"	p	language:Java
+getBricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Brick[][] getBricks() {$/;"	m	language:Java	class:Level
 getColor	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Color getColor() {$/;"	m	language:Java	class:Brick
+getLevel	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^    public Level getLevel(int stage) {$/;"	m	language:Java	class:LevelFactory
 getR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public int getR() {$/;"	m	language:Java	class:Ball
 gui	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^package gui;$/;"	p	language:Java
 H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int H = 15;$/;"	f	language:Java	class:Brick
 H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final int H = 20;$/;"	f	language:Java	class:Paddle
 hit	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public boolean hit() {$/;"	m	language:Java	class:Brick
 layer	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private int layer;$/;"	f	language:Java	class:Brick	file:
+Level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Level(int maxlayers, int height, boolean rand) {$/;"	m	language:Java	class:Level
+level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^package level;$/;"	p	language:Java
+Level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^public class Level {$/;"	c	language:Java
+level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^package level;$/;"	p	language:Java
+LevelFactory	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^public class LevelFactory {$/;"	c	language:Java
 main	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^	public static void main(String[] args) {$/;"	m	language:Java	class:Breakout
 Paddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^public class Paddle {$/;"	c	language:Java
 primary	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private Stage primary;$/;"	f	language:Java	class:Breakout	file:
@@ -23,3 +31,4 @@ RADIUS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball
 start	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    public void start(Stage primary) throws IOException {$/;"	m	language:Java	class:Breakout
 W	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int W = 30;$/;"	f	language:Java	class:Brick
 W	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final int W = 100;$/;"	f	language:Java	class:Paddle
+WIDTH	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int WIDTH = 15;$/;"	f	language:Java	class:Level	file:

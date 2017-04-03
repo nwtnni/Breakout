@@ -1,4 +1,5 @@
 package level;
+import elements.Brick;
 import java.util.Random;
 
 public class Level {
@@ -8,7 +9,7 @@ public class Level {
     
     public Level(int maxlayers, int height, boolean rand) {
         
-        bricks = new Bricks[height][15];
+        bricks = new Brick[height][15];
         Random r = new Random();
 
         if (rand) {
@@ -29,7 +30,7 @@ public class Level {
         }
     }
 
-    public Bricks[][] getBricks() {
+    public Brick[][] getBricks() {
         return bricks; 
     }
 }
