@@ -11,7 +11,4 @@ public class Ball {
         return RADIUS; 
     }
 
-    public Color getColor() {
-        return COLOR; 
-    }
 }

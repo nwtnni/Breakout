@@ -21,8 +21,8 @@ public class Brick  {
         Color.web("#180EOD")  // Black
     };
 
-    public static final int H = 25;
-    public static final int W = 40;
+    public static final int H = 15;
+    public static final int W = 30;
     private int layer;
 
     public Brick(int n) {
