@@ -23,6 +23,12 @@ public class Level {
     private static final int SCRH = 800;
     private static final int SCRW = 800;    
 
+    /*
+     * @param maxlayers Number of brick layers to use (1-12, 13 is infinite)
+     * @param height Number of brick columns
+     * @param rand True for every brick is random; false for every row is random
+     * @param score Any score from previous rounds
+     */
     public Level(int maxlayers, int height, boolean rand, int score) {
 
         // Initialize paddle
@@ -62,10 +68,22 @@ public class Level {
         }
     }
 
+    /*
+     * User interaction. Checks that paddle is
+     * in bounds before updating.
+     */
     public void movePaddle(double x) {
+        if (x < 0 || x + Paddle.W > SCRW) return;
         px = x; 
     }
 
+    /*
+     * Main game logic method. 
+     * @return 0 for nothing special;
+     *      1 for all bricks destroyed;
+     *      2 for game over;
+     *      3 for life lost.
+     */
     public int step() {
         if (lives == 0) return 2;
         else if (score == ROWS * COLS) return 1;
@@ -96,6 +114,10 @@ public class Level {
         return 0;
     }
 
+    /*
+     * Returns false if ball hit bottom; otherwise
+     * handles wall collisions and returns true.
+     */
     private boolean checkWalls() {
         double r = Ball.R;
 
@@ -117,6 +139,10 @@ public class Level {
         return true;
     }
 
+    /*
+     * Returns false if no collision; otherwise
+     * handles paddle collision and returns true.
+     */
     private boolean checkPaddle() {
 
        if (ballCollision(px, py, Paddle.H, Paddle.W)) {
@@ -139,8 +165,11 @@ public class Level {
        return false;
     }
 
+    /*
+     * Returns false if no collision; otherwise
+     * handles all brick collisions and returns true.
+     */
     private boolean checkBricks() {
-
 
         for (int y = 0; y < ROWS; y++) {
             for (int x = 0; x < COLS; x++) {
@@ -164,6 +193,10 @@ public class Level {
         return false;
     }
 
+    /*
+     * Helper method to check for circle-rectangle collisions.
+     * Returns true if there is one.
+     */
     private boolean ballCollision(double x, double y, double h, double w) {
 
         int r = Ball.R;
