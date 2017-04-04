@@ -36,8 +36,8 @@ public class Level {
         py = SCRH - 50 - Paddle.H / 2;
 
         // Initialize ball
-        bx = SCRW / 2;
-        by = py - Ball.R;
+        bx = (SCRW - Ball.R) / 2;
+        by = py - 2*Ball.R;
         bxv = 0;
         byv = 0;
 

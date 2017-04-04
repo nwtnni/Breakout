@@ -35,8 +35,7 @@ public class LevelView {
         int rows = bricks[0].length;
 
         for (double y = 50, c = 0; c < cols; c++, y += Brick.H + 10) {
-            
-            for (double x = 27.5, r = 0; r < rows; r++, y += Brick.W + 5) {
+            for (double x = 27.5, r = 0; r < rows; r++, x += Brick.W + 5) {
                 Brick b = bricks[(int) c][(int) r];
                 gc.setFill(b.getColor());
                 gc.fillRect(x, y, Brick.W, Brick.H);
@@ -45,7 +44,7 @@ public class LevelView {
 
         // Draw score
         String score = "Score: " + level.getScore();
-        gc.strokeText(score, SCRW - 200, Ball.R, 200);
+        gc.strokeText(score, SCRW - 75, 20, 75);
 
         // Draw lives
         gc.setFill(Ball.C);

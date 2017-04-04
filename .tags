@@ -23,7 +23,7 @@ elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Pa
 getBall	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public double[] getBall() {$/;"	m	language:Java	class:Level
 getBricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Brick[][] getBricks() {$/;"	m	language:Java	class:Level
 getColor	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Color getColor() {$/;"	m	language:Java	class:Brick
-getLevel	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^    public Level getLevel(int stage) {$/;"	m	language:Java	class:LevelFactory
+getLevel	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^    public Level getLevel(int stage, int score) {$/;"	m	language:Java	class:LevelFactory
 getLives	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public int getLives() {$/;"	m	language:Java	class:Level
 getPaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public double[] getPaddle() {$/;"	m	language:Java	class:Level
 getScore	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public int getScore() {$/;"	m	language:Java	class:Level

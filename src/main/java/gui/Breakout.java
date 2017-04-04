@@ -39,7 +39,7 @@ public class Breakout extends Application {
         lv = new LevelView((Canvas) fxml.getNamespace().get("canvas"));
 
         stage = 1;
-        l = lf.getLevel(stage);
+        l = lf.getLevel(stage, 0);
         lv.setLevel(l);
 
         KeyFrame render = new KeyFrame(Duration.millis(1000.0 / 30.0), ae -> {
@@ -64,6 +64,8 @@ public class Breakout extends Application {
         Timeline logic = new Timeline(30, gameLogic);
         logic.setCycleCount(Timeline.INDEFINITE);
 
+        view.play();
+        primary.show();
     }
 }
 
