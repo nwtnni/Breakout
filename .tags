@@ -45,6 +45,7 @@ gui	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.ja
 H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int H = 15;$/;"	f	language:Java	class:Brick
 H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final int H = 20;$/;"	f	language:Java	class:Paddle
 hit	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public boolean hit() {$/;"	m	language:Java	class:Brick
+keyboard	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private static boolean keyboard;$/;"	f	language:Java	class:Breakout	file:
 l	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private Level l;$/;"	f	language:Java	class:Breakout	file:
 layer	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private int layer;$/;"	f	language:Java	class:Brick	file:
 level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    private Level level;$/;"	f	language:Java	class:LevelView	file:
@@ -59,6 +60,7 @@ lf	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java
 lives	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private int lives;$/;"	f	language:Java	class:Level	file:
 lv	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private LevelView lv;$/;"	f	language:Java	class:Breakout	file:
 main	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    public static void main(String[] args) {$/;"	m	language:Java	class:Breakout
+mouse	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private static boolean mouse;$/;"	f	language:Java	class:Breakout	file:
 movePaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public void movePaddle(double x) {$/;"	m	language:Java	class:Level
 Paddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^public class Paddle {$/;"	c	language:Java
 play	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^        private void play() {$/;"	m	language:Java	class:Breakout.GameLogic	file:
@@ -76,11 +78,13 @@ SCRW	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.j
 SCRW	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int SCRW = 800;    $/;"	f	language:Java	class:Level	file:
 setOnMouseClicked	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    public void setOnMouseClicked(EventHandler<? super MouseEvent> handler) {$/;"	m	language:Java	class:LevelView
 setOnMouseMoved	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    public void setOnMouseMoved(EventHandler<? super MouseEvent> handler) {$/;"	m	language:Java	class:LevelView
-stage	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private int stage;$/;"	f	language:Java	class:Breakout	file:
+slidePaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public void slidePaddle(int dir) {$/;"	m	language:Java	class:Level
+stage	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private static int stage;$/;"	f	language:Java	class:Breakout	file:
 start	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    public void start(Stage primary) throws IOException {$/;"	m	language:Java	class:Breakout
 startBall	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public void startBall(double x, double y) {$/;"	m	language:Java	class:Level
 step	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public int step() {$/;"	m	language:Java	class:Level
 stop	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^        private void stop() {$/;"	m	language:Java	class:Breakout.GameLogic	file:
 stop	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^        private void stop() {$/;"	m	language:Java	class:Breakout.GraphicsRender	file:
+usage	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private static void usage() {$/;"	m	language:Java	class:Breakout	file:
 W	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int W = 45;$/;"	f	language:Java	class:Brick
 W	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final int W = 100;$/;"	f	language:Java	class:Paddle

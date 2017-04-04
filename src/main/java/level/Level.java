@@ -98,6 +98,13 @@ public class Level {
     }
 
     /*
+     * User interaction. Moves paddle incrementally.
+     */
+    public void slidePaddle(int dir) {
+        movePaddle(px + Paddle.W / 2 + dir * 10);
+    }
+
+    /*
      * Returns the array of bricks.
      */
     public Brick[][] getBricks() {
@@ -140,7 +147,6 @@ public class Level {
      */
     public int step() {
         if (bxv == 0 && byv == 0) return 0;
-        if (lives == 0) return 2;
         else if (progress == ROWS * COLS) return 1;
 
         // Update ball location
@@ -155,7 +161,7 @@ public class Level {
         }
         else if (!checkWalls()) {
 
-            lives--; 
+            if (--lives == 0) return 2;
 
             // Initialize paddle
             px = (SCRW - Paddle.W) / 2;
@@ -251,6 +257,7 @@ public class Level {
                         bricks[y][x] = null;
                     }
 
+                    progress++;
                     score++;
                     return true;
                 }

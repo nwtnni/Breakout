@@ -6,18 +6,18 @@ public class Brick  {
     
     // Color mapping for bricks
     private static final Color[] colors = {
-        Color.web("#DAEFD1"), // Green
-        Color.web("#D6EDCB"),
-        Color.web("#D1EBC5"),
-        Color.web("#CDEAC0"), 
-        Color.web("#FFC2A3"), // Orange
-        Color.web("#FFBB97"),
-        Color.web("#FFB38C"),
-        Color.web("#FFAC81"),
-        Color.web("#FFAFFA"), // Red
-        Color.web("#FFA5A0"),
-        Color.web("#FF9B95"),
-        Color.web("#FF928B"),
+        Color.web("#CFE4AB"), // Green
+        Color.web("#9FC957"),
+        Color.web("#71A516"),
+        Color.web("#44630E"), 
+        Color.web("#FDE2B2"), // Orange
+        Color.web("#FCC566"),
+        Color.web("#E5A029"),
+        Color.web("#896019"),
+        Color.web("#FDC5A4"), // Red
+        Color.web("#FC8C4A"),
+        Color.web("#E55907"),
+        Color.web("#893504"),
         Color.web("#000000")  // Black
     };
 

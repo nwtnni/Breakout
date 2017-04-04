@@ -10,6 +10,7 @@ import javafx.event.EventHandler;
 import javafx.scene.canvas.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 
 public class LevelView {
 
@@ -24,11 +25,14 @@ public class LevelView {
         level = l;
     }
 
+    // Main drawing method
     public void redraw() {
 
+        // Clear screen
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
+        // Draw bricks
         Brick[][] bricks = level.getBricks();
         int cols = bricks.length;
         int rows = bricks[0].length;
@@ -62,13 +66,17 @@ public class LevelView {
         gc.fillRect(paddle[0], paddle[1], Paddle.W, Paddle.H);
     }
 
+    // Draw game over image
     public void gameOver() {
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-        Image gameover = new Image(getClass().getResourceAsStream("gameover.png"));
+        gc.setFill(Color.WHITE);
+        gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
+        Image gameover = new Image(getClass().getResourceAsStream("/gameover.png"));
         gc.drawImage(gameover, 0, 0, SCRW, SCRH);
     }
 
+    // Methods to access canvas EventHandlers
+    
     public void setOnMouseMoved(EventHandler<? super MouseEvent> handler) {
         canvas.setOnMouseMoved(handler); 
     }

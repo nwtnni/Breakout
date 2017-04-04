@@ -1,6 +1,7 @@
 package gui;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -23,18 +24,65 @@ public class Breakout extends Application {
     private GameLogic gl;
     private Canvas canvas;
 
-    private int stage;
+    private static int stage;
     private static boolean autoplay;
+    private static boolean mouse;
+    private static boolean keyboard;
 
-
+    // Take command-line args
     public static void main(String[] args) {
-        if (args[0].equals("auto")) {
-            autoplay = true;
+
+        if (args.length != 2) {
+            usage();
+            System.exit(1);
         }
-        else {
-            autoplay = false;
+
+        switch (args[0]) {
+            case "-a":
+                autoplay = true;
+                break;
+            case "-k":
+                keyboard = true;
+                break;
+            case "-m":
+                mouse = true;
+                break;
+            default:
+                usage();
+                System.exit(1);
+        }
+        switch (args[1]) {
+            case "1":
+                stage = 1;
+                break;
+            case "2":
+                stage = 2;
+                break;
+            case "3":
+                stage = 3;
+                break;
+            case "4":
+                stage = 4;
+                break;
+            default:
+                usage();
+                System.exit(1);
         }
         Application.launch(args);
+    }
+
+    // Helper method for printing usage
+    private static void usage() {
+        System.out.println("Usage: java -jar Breakout.jar -<CONTROL> <STAGE>");
+        System.out.println("<CONTROL> must be one of the following:");
+        System.out.println("a for autoplay");
+        System.out.println("m for mouse control");
+        System.out.println("k for keyboard control");
+        System.out.println("<STAGE> must be one of the following:");
+        System.out.println("1 for 1-4 layer bricks");
+        System.out.println("2 for 1-8 layer bricks");
+        System.out.println("3 for 1-12 layer bricks");
+        System.out.println("4 for 1-13 layer bricks");
     }
 
     @Override
@@ -44,7 +92,6 @@ public class Breakout extends Application {
         final Scene scene = new Scene(fxml.load());
         primary.setScene(scene);
 
-        stage = 1;
         canvas = (Canvas) fxml.getNamespace().get("canvas");
 
         lf = new LevelFactory();
@@ -54,21 +101,41 @@ public class Breakout extends Application {
         gl = new GameLogic(l);
         gr = new GraphicsRender(lv);
 
-        if (!autoplay) {
+        // Control setup
+        if (autoplay) {
+            l.startBall(800, 0);
+        }
+        else {
+            lv.setOnMouseClicked(me -> {
+                l.startBall(me.getX(), me.getY());
+            });
+        }
+
+        if (mouse) {
             lv.setOnMouseMoved(me -> {
                 l.movePaddle(me.getX());
             });
         }
 
-        lv.setOnMouseClicked(me -> {
-            l.startBall(me.getX(), me.getY());
-        });
+        if (keyboard) {
+            scene.setOnKeyTyped(kp -> {
+                switch (kp.getCharacter()) {
+                    case "a":
+                        l.slidePaddle(-1);
+                        break;
+                    case "d":
+                        l.slidePaddle(1);
+                    default:
+                }
+            });
+        }
 
         gl.play();
         gr.play();
         primary.show();
     }
 
+    // Next level!
     private void advance(int prevScore) {
         gr.stop();
         gl.stop();
@@ -78,16 +145,27 @@ public class Breakout extends Application {
         gr = new GraphicsRender(lv);
         gl = new GameLogic(l);
 
+        if (autoplay) {
+            l.startBall(800, 0); 
+        }
+
         gr.play();
         gl.play();
     }
 
+    // Game over screen
     private void gameOver() {
         gr.stop();
         gl.stop();
-        lv.gameOver();
+        try {
+            TimeUnit.MILLISECONDS.sleep(100);
+            lv.gameOver();
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
+    // Helper class for rendering graphics
     private class GraphicsRender {
 
         private Timeline gr;
@@ -111,6 +189,7 @@ public class Breakout extends Application {
         }
     }
 
+    // Helper class for main game loop
     private class GameLogic {
 
         private Timeline gl;
