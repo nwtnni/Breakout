@@ -10,18 +10,23 @@ bxv	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java
 by	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double by;$/;"	f	language:Java	class:Level	file:
 byv	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double byv;$/;"	f	language:Java	class:Level	file:
 C	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final Color C = Color.RED;$/;"	f	language:Java	class:Ball
+C	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final Color C = Color.DARKSEAGREEN;$/;"	f	language:Java	class:Paddle
 canvas	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    private Canvas canvas;$/;"	f	language:Java	class:LevelView	file:
 checkBricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private boolean checkBricks() {$/;"	m	language:Java	class:Level	file:
 checkPaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private boolean checkPaddle() {$/;"	m	language:Java	class:Level	file:
 checkWalls	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private boolean checkWalls() {$/;"	m	language:Java	class:Level	file:
-COLOR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final Color COLOR = Color.DARKSEAGREEN;$/;"	f	language:Java	class:Paddle
 colors	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private static final Color[] colors = {$/;"	f	language:Java	class:Brick	file:
 COLS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int COLS = 15;$/;"	f	language:Java	class:Level	file:
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^package elements;$/;"	p	language:Java
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^package elements;$/;"	p	language:Java
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^package elements;$/;"	p	language:Java
+getBall	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public double[] getBall() {$/;"	m	language:Java	class:Level
+getBricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Brick[][] getBricks() {$/;"	m	language:Java	class:Level
 getColor	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Color getColor() {$/;"	m	language:Java	class:Brick
 getLevel	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^    public Level getLevel(int stage) {$/;"	m	language:Java	class:LevelFactory
+getLives	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public int getLives() {$/;"	m	language:Java	class:Level
+getPaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public double[] getPaddle() {$/;"	m	language:Java	class:Level
+getScore	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public int getScore() {$/;"	m	language:Java	class:Level
 gui	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^package gui;$/;"	p	language:Java
 gui	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^package gui;$/;"	p	language:Java
 H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int H = 15;$/;"	f	language:Java	class:Brick
@@ -50,6 +55,7 @@ redraw	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView
 ROWS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private int ROWS;$/;"	f	language:Java	class:Level	file:
 score	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private int score;$/;"	f	language:Java	class:Level	file:
 SCRH	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int SCRH = 800;$/;"	f	language:Java	class:Level	file:
+SCRW	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    private static final int SCRW = 800;$/;"	f	language:Java	class:LevelView	file:
 SCRW	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int SCRW = 800;    $/;"	f	language:Java	class:Level	file:
 setLevel	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    public void setLevel(Level l) {$/;"	m	language:Java	class:LevelView
 setOnMouseMoved	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    public void setOnMouseMoved(EventHandler<? super MouseEvent> handler) {$/;"	m	language:Java	class:LevelView

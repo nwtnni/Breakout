@@ -78,6 +78,41 @@ public class Level {
     }
 
     /*
+     * Returns the array of bricks.
+     */
+    public Brick[][] getBricks() {
+        return bricks; 
+    }
+
+    /*
+     * Returns ball location info.
+     */
+    public double[] getBall() {
+        return new double[] {bx, by};
+    }
+
+    /*
+     * Returns paddle location info.
+     */
+    public double[] getPaddle() {
+        return new double[] {px, py};
+    }
+
+    /*
+     * Returns number of lives.
+     */
+    public int getLives() {
+        return lives; 
+    }
+
+    /*
+     * Returns current score.
+     */
+    public int getScore() {
+        return score; 
+    }
+
+    /*
      * Main game logic method. 
      * @return 0 for nothing special;
      *      1 for all bricks destroyed;
@@ -87,6 +122,10 @@ public class Level {
     public int step() {
         if (lives == 0) return 2;
         else if (score == ROWS * COLS) return 1;
+
+        // Update ball location
+        bx += bxv;
+        by += byv;
 
         if (checkPaddle()) {
            return 0;  
