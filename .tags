@@ -1,24 +1,36 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
 Ball	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^public class Ball {$/;"	c	language:Java
-ball	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private Ball ball;$/;"	f	language:Java	class:Level	file:
+ballCollision	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private boolean ballCollision(double x, double y, double h, double w) {$/;"	m	language:Java	class:Level	file:
 Breakout	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^public class Breakout extends Application {$/;"	c	language:Java
+Brick	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Brick(int n) {$/;"	m	language:Java	class:Brick
+Brick	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^public class Brick  {$/;"	c	language:Java
 bricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private Brick[][] bricks;$/;"	f	language:Java	class:Level	file:
+bx	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double bx;$/;"	f	language:Java	class:Level	file:
+bxv	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double bxv;$/;"	f	language:Java	class:Level	file:
+by	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double by;$/;"	f	language:Java	class:Level	file:
+byv	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double byv;$/;"	f	language:Java	class:Level	file:
+C	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final Color C = Color.RED;$/;"	f	language:Java	class:Ball
 canvas	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    private Canvas canvas;$/;"	f	language:Java	class:LevelView	file:
-COLOR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final Color COLOR = Color.RED;$/;"	f	language:Java	class:Ball
+checkBricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private boolean checkBricks() {$/;"	m	language:Java	class:Level	file:
+checkPaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private boolean checkPaddle() {$/;"	m	language:Java	class:Level	file:
+checkWalls	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private boolean checkWalls() {$/;"	m	language:Java	class:Level	file:
 COLOR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final Color COLOR = Color.DARKSEAGREEN;$/;"	f	language:Java	class:Paddle
+colors	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private static final Color[] colors = {$/;"	f	language:Java	class:Brick	file:
+COLS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int COLS = 15;$/;"	f	language:Java	class:Level	file:
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^package elements;$/;"	p	language:Java
+elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^package elements;$/;"	p	language:Java
 elements	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^package elements;$/;"	p	language:Java
-getBall	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Ball getBall() {$/;"	m	language:Java	class:Level
-getBricks	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Brick[][] getBricks() {$/;"	m	language:Java	class:Level
+getColor	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public Color getColor() {$/;"	m	language:Java	class:Brick
 getLevel	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^    public Level getLevel(int stage) {$/;"	m	language:Java	class:LevelFactory
-getLives	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public int getLives() {$/;"	m	language:Java	class:Level
-getPaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Paddle getPaddle() {$/;"	m	language:Java	class:Level
-getR	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public int getR() {$/;"	m	language:Java	class:Ball
 gui	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^package gui;$/;"	p	language:Java
 gui	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^package gui;$/;"	p	language:Java
+H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int H = 15;$/;"	f	language:Java	class:Brick
 H	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final int H = 20;$/;"	f	language:Java	class:Paddle
+hit	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public boolean hit() {$/;"	m	language:Java	class:Brick
+l	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private Level l;$/;"	f	language:Java	class:Breakout	file:
+layer	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    private int layer;$/;"	f	language:Java	class:Brick	file:
 level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    private Level level;$/;"	f	language:Java	class:LevelView	file:
-Level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Level(int maxlayers, int height, boolean rand) {$/;"	m	language:Java	class:Level
+Level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public Level(int maxlayers, int height, boolean rand, int score) {$/;"	m	language:Java	class:Level
 level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^package level;$/;"	p	language:Java
 Level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^public class Level {$/;"	c	language:Java
 level	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/LevelFactory.java	/^package level;$/;"	p	language:Java
@@ -28,16 +40,21 @@ LevelView	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelV
 lf	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private LevelFactory lf;$/;"	f	language:Java	class:Breakout	file:
 lives	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private int lives;$/;"	f	language:Java	class:Level	file:
 lv	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private LevelView lv;$/;"	f	language:Java	class:Breakout	file:
-main	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^	public static void main(String[] args) {$/;"	m	language:Java	class:Breakout
+main	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    public static void main(String[] args) {$/;"	m	language:Java	class:Breakout
+movePaddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public void movePaddle(double x) {$/;"	m	language:Java	class:Level
 Paddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^public class Paddle {$/;"	c	language:Java
-paddle	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private Paddle paddle;$/;"	f	language:Java	class:Level	file:
-RADIUS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final int RADIUS = 10;$/;"	f	language:Java	class:Ball
+px	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double px;$/;"	f	language:Java	class:Level	file:
+py	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private double py;$/;"	f	language:Java	class:Level	file:
+R	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public static final int R = 10;$/;"	f	language:Java	class:Ball
 redraw	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    public void redraw() {$/;"	m	language:Java	class:LevelView
+ROWS	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private int ROWS;$/;"	f	language:Java	class:Level	file:
+score	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private int score;$/;"	f	language:Java	class:Level	file:
+SCRH	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int SCRH = 800;$/;"	f	language:Java	class:Level	file:
+SCRW	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int SCRW = 800;    $/;"	f	language:Java	class:Level	file:
 setLevel	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    public void setLevel(Level l) {$/;"	m	language:Java	class:LevelView
+setOnMouseMoved	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/LevelView.java	/^    public void setOnMouseMoved(EventHandler<? super MouseEvent> handler) {$/;"	m	language:Java	class:LevelView
 stage	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    private int stage;$/;"	f	language:Java	class:Breakout	file:
 start	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/gui/Breakout.java	/^    public void start(Stage primary) throws IOException {$/;"	m	language:Java	class:Breakout
+step	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    public int step() {$/;"	m	language:Java	class:Level
+W	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Brick.java	/^    public static final int W = 45;$/;"	f	language:Java	class:Brick
 W	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public static final int W = 100;$/;"	f	language:Java	class:Paddle
-WIDTH	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/level/Level.java	/^    private static final int WIDTH = 15;$/;"	f	language:Java	class:Level	file:
-x	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public double x;$/;"	f	language:Java	class:Ball
-x	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Paddle.java	/^    public double x;$/;"	f	language:Java	class:Paddle
-y	/home/nni/Dropbox/School/CS/Projects/Breakout/src/main/java/elements/Ball.java	/^    public double y;$/;"	f	language:Java	class:Ball

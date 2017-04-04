@@ -3,7 +3,9 @@ package gui;
 import elements.Brick;
 import level.Level;
 
+import javafx.event.EventHandler;
 import javafx.scene.canvas.*;
+import javafx.scene.input.MouseEvent;
 
 public class LevelView {
 
@@ -11,11 +13,11 @@ public class LevelView {
     private Canvas canvas;
 
     public LevelView(Canvas c) {
-        canvas = c; 
+        canvas = c;
     }
 
     public void setLevel(Level l) {
-        level = l; 
+        level = l;
     }
 
     public void redraw() {
@@ -38,5 +40,9 @@ public class LevelView {
             x = 5;
             y += Brick.H + 10;
         }
+    }
+
+    public void setOnMouseMoved(EventHandler<? super MouseEvent> handler) {
+        canvas.setOnMouseMoved(handler); 
     }
 }
