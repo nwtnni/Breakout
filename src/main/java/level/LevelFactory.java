@@ -4,7 +4,7 @@ public class LevelFactory {
     
     public Level getLevel(int stage) {
 
-        if (stage < 13) {
+        if (stage < 14) {
             return new Level(stage, 5, false);
         }
         else if (stage < 19) {

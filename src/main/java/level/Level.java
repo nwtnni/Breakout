@@ -1,14 +1,20 @@
 package level;
-import elements.Brick;
+import elements.*;
 import java.util.Random;
 
 public class Level {
 
     private Brick[][] bricks;
+    private Paddle paddle;
+    private Ball ball;
+    private int lives;
+
     private static final int WIDTH = 15;
-    
+
     public Level(int maxlayers, int height, boolean rand) {
-        
+
+        ball = new Ball();
+        paddle = new Paddle();
         bricks = new Brick[height][15];
         Random r = new Random();
 
@@ -31,6 +37,18 @@ public class Level {
     }
 
     public Brick[][] getBricks() {
-        return bricks; 
+        return bricks;
+    }
+
+    public Paddle getPaddle() {
+        return paddle;
+    }
+
+    public Ball getBall() {
+        return ball;
+    }
+
+    public int getLives() {
+        return lives;
     }
 }

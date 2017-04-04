@@ -18,11 +18,11 @@ public class Brick  {
         Color.web("#FFA5A0"),
         Color.web("#FF9B95"),
         Color.web("#FF928B"),
-        Color.web("#180EOD")  // Black
+        Color.web("#000000")  // Black
     };
 
     public static final int H = 15;
-    public static final int W = 30;
+    public static final int W = 45;
     private int layer;
 
     public Brick(int n) {

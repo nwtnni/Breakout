@@ -7,4 +7,6 @@ public class Paddle {
     public static final int W = 100;
     public static final Color COLOR = Color.DARKSEAGREEN;
 
+    public double x;
+
 }
