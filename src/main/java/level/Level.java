@@ -17,6 +17,7 @@ public class Level {
 
     private int lives;
     private int score;
+    private int progress;
 
     private int ROWS;
     private static final int COLS = 15;
@@ -37,13 +38,14 @@ public class Level {
 
         // Initialize ball
         bx = (SCRW - Ball.R) / 2;
-        by = py - 2*Ball.R;
+        by = py - Ball.R;
         bxv = 0;
         byv = 0;
 
         // Initialize stats 
         lives = 3;
         this.score = score;
+        progress = 0;
 
         // Initialize bricks
         ROWS = height;
@@ -73,8 +75,26 @@ public class Level {
      * in bounds before updating.
      */
     public void movePaddle(double x) {
-        if (x < 0 || x + Paddle.W > SCRW) return;
-        px = x; 
+        if (x < Paddle.W / 2 || x + Paddle.W / 2 > SCRW) return;
+        if (bxv == 0 && byv == 0) return;
+        px = x - Paddle.W / 2; 
+    }
+
+    /*
+     * User interaction. Starts the ball moving
+     * when it is stopped.
+     */
+    public void startBall(double x, double y) {
+        if (bxv == 0 && byv == 0) {
+
+            // Triangle wizardry
+            final int MAX_START_V = 6;
+            double dx = x - (px + Paddle.W/2);
+            double dy = y - (py + Paddle.H/2);
+            double hyp = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+            bxv = dx * MAX_START_V / hyp;
+            byv = dy * MAX_START_V / hyp;
+        }
     }
 
     /*
@@ -116,12 +136,12 @@ public class Level {
      * Main game logic method. 
      * @return 0 for nothing special;
      *      1 for all bricks destroyed;
-     *      2 for game over;
-     *      3 for life lost.
+     *      2 for game over.
      */
     public int step() {
+        if (bxv == 0 && byv == 0) return 0;
         if (lives == 0) return 2;
-        else if (score == ROWS * COLS) return 1;
+        else if (progress == ROWS * COLS) return 1;
 
         // Update ball location
         bx += bxv;
@@ -142,12 +162,10 @@ public class Level {
             py = SCRH - 50 - Paddle.H / 2;
 
             // Initialize ball
-            bx = SCRW / 2;
+            bx = (SCRW - Ball.R) / 2;
             by = py - Ball.R;
             bxv = 0;
             byv = 0;
-
-            return 3;
         }
 
         return 0;
@@ -161,7 +179,7 @@ public class Level {
         double r = Ball.R;
 
         // Hit bottom
-        if (bx + r > SCRH) {
+        if (by + r > SCRH) {
             return false; 
         }
         
@@ -184,20 +202,29 @@ public class Level {
      */
     private boolean checkPaddle() {
 
-       if (ballCollision(px, py, Paddle.H, Paddle.W)) {
+       if (ballCollision(px, py, Paddle.W, Paddle.H)) {
        
             // Add some variation to ball movement
             Random r = new Random();
-            byv += (r.nextGaussian() - 0.5) * byv;
+            byv += (r.nextGaussian() - 0.5) * .5;
 
             // Give ball extra speed
             double scale = (bx - px) / Paddle.W;
             if (bxv < 0) {
-                bxv += 2 * Math.log(scale + 0.5);
+                bxv += .2 * Math.log(scale + 0.5);
             }
             else {
-                bxv -= 2 * Math.log(1.5 - scale);
+                bxv -= .2 * Math.log(1.5 - scale);
             }
+
+            // Sanity
+            bxv = (bxv < 0) ? Math.max(-6, bxv) : Math.min(bxv, 6);
+            if (0 > bxv && bxv > -3.5) bxv = -3.5;
+            if (0 < bxv && bxv < 3.5) bxv = 3.5;
+
+            byv = (byv < 0) ? Math.max(-6, byv) : Math.min(byv, 6);
+            if (0 > byv && byv > -3.5) byv = -3.5;
+            if (0 < byv && byv < 3.5) byv = 3.5;
 
             return true;
        }
@@ -218,13 +245,13 @@ public class Level {
                 double brx = 27.5 + x * (Brick.W + 5);
                 double bry = 50 + y * (Brick.H + 10); 
 
-                if (ballCollision(brx, bry, Brick.H, Brick.W)) {
+                if (ballCollision(brx, bry, Brick.W, Brick.H)) {
                     
                     if (bricks[y][x].hit()) {
                         bricks[y][x] = null;
-                        score++;
                     }
 
+                    score++;
                     return true;
                 }
             }
@@ -236,30 +263,24 @@ public class Level {
      * Helper method to check for circle-rectangle collisions.
      * Returns true if there is one.
      */
-    private boolean ballCollision(double x, double y, double h, double w) {
+    private boolean ballCollision(double x, double y, double w, double h) {
 
         int r = Ball.R;
+        double xdist = Math.abs(bx - (x + w / 2));
+        double ydist = Math.abs(by - (y + h / 2));
 
         // Check for too far
-        if (bx - r > x + w || bx + r < x) return false;
-        if (by - r > y + h || by - r < y) return false;
+        if (xdist > w / 2 + r) return false;
+        if (ydist > h / 2 + r) return false;
 
         // Check for too close
-        if (bx - r < x + w || bx + r > x) {
-            bxv = -bxv; 
+        if (ydist <= h / 2 + r) {
+            byv = -byv; 
             return true;
         }
-        if (by - r < y + h || by + r > y) {
-            byv = -byv; 
-            return false;
-        }
 
-        double xdist = Math.abs(bx - (x + w) / 2);
-        double ydist = Math.abs(by - (y + h) / 2);
-
-        if (Math.pow(xdist - h/2, 2) + Math.pow(ydist - w/2, 2) < r * r) {
+        if (xdist <= w / 2 + r) {
             bxv = -bxv; 
-            byv = -byv;
             return true;
         }
         return false;
